@@ -1,6 +1,6 @@
 # Portfolio Open Use
 
-Easy Portfoliomaker
+Easy Portfolio maker
 
 ## Starting with 🚀
 
