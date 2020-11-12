@@ -1,10 +1,11 @@
 import React from 'react';
+import AppRouter from './routes/AppRouter';
 
 
 function AppPortfolio() {
   return (
     <div className="App">
-      <h1>My Port</h1>
+      <AppRouter />
     </div>
   );
 }

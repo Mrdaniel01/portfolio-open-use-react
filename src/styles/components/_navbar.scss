@@ -1,0 +1,12 @@
+.navbar__container {
+  font-family:  $second-font;
+  color: white;
+  a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 24px;
+    &:hover {
+      background-color: aquamarine;
+    }
+  }
+}
