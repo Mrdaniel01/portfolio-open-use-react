@@ -14,7 +14,7 @@ export default function AppRouter() {
   return (
     <Router>
       <Navbar />
-      <div>
+      <div className="router__container">
         <Switch>
           <Route path="/login">
             <LoginScreen />

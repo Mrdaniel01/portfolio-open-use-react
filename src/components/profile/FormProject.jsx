@@ -1,9 +1,9 @@
 import React from 'react'
 
-export const ProfileScreen = () => {
+export const FormProject = () => {
   return (
     <div>
-      profile
+      FormProject
     </div>
   )
 }

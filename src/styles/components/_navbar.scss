@@ -1,12 +1,31 @@
-.navbar__container {
-  font-family:  $second-font;
-  color: white;
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #1f2828ab;
+  border-radius: 0 0 15px 15px;
+  box-shadow: 0 3px 6px 1px rgba(0, 0, 0, 0.3);
   a {
-    color: white;
     text-decoration: none;
-    padding: 5px 24px;
+    color: white;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 24px;
+
+    transition: .5s;
     &:hover {
-      background-color: aquamarine;
+      background-color: darken($color: $main-dark-color , $amount: 10);
+      border-radius: 7px;
     }
   }
+}
+
+.navbar__container {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
 }

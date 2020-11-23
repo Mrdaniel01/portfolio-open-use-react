@@ -1,0 +1,82 @@
+.card-profile__container {
+  margin-top: 50px;
+  padding: 200px 10px 35px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: $main-dark-color;
+  border-radius: 35px;
+  position: relative;
+  width: 360px;
+  box-shadow: 0 3px 3px 1px rgba(0, 0, 0, 0.3);
+  cursor: default;
+
+  .card-profile__user--img {
+    border: 8px solid white;
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    box-shadow: inset 0px 3px 3px 3px hsla(0, 0%, 0%, 0.3) ;
+    position: absolute;
+    top: -50px;
+
+    background-image: url(../../assets/profile.jpg);
+    background-size: cover;
+  }
+
+  .card-profile__user--name {
+
+    h2 {
+      padding: 15px ;
+    }
+  }
+
+  .card-profile__user--tech {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0 20px;
+  }
+
+  .card-profile__user--social {
+    display: flex;
+    padding-top: 95px;
+    padding-bottom: 35px;
+
+    img {
+      width: 30px;
+      margin: 5px;
+    }
+  }
+
+  .card-profile__user--email {
+    background-color: white;
+    color: black;
+    width: 80%;
+    padding: 10px 0;
+    border-radius: 500px;
+    box-shadow: 0 3px 5px 3px rgba(0, 0, 0, 0.3);
+    vertical-align: center;
+
+    transition: all .5s;
+
+    &:hover {
+      box-shadow: 0 6px 6px 1px rgba(0, 0, 0, 0.6);
+      
+    }
+  }
+
+}
+
+.pill {
+  background-color: white;
+  color: black;
+  border-radius: 5000px;
+  padding: 2px 5px;
+  display: inline;
+  margin: 5px 5px;
+  font-size: .8rem;
+  font-weight: bold;
+  box-shadow: 0 3px 3px 1px rgba(0, 0, 0, 0.3);
+}

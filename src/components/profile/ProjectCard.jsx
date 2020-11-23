@@ -1,9 +1,9 @@
 import React from 'react'
 
-export const ProfileScreen = () => {
+export const ProjectCard = () => {
   return (
     <div>
-      profile
+      CardProject
     </div>
   )
 }

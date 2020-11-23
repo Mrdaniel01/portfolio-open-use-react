@@ -1,4 +1,15 @@
 body {
   height: 100%;
-  background-color: $main-dark-color;
+  background-image: url(../../assets/bg5.svg);
+  background-position: cover;
+  // background-image: url('../../assets/25101.jpg');
+  // background-size: cover;
+  // background-attachment: fixed;
+  // background-position: left center;
+}
+
+.router__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: $padding;
 }

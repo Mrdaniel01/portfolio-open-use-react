@@ -1,9 +1,15 @@
 
 //Settings
-@import './base/settings';
 @import './base/base';
+@import './base/settings';
 
 //Components
 
 @import './components/appPortfolio';
 @import './components/navbar';
+@import './components/cardProfile';
+
+//Screens
+
+@import './components/authScreen';
+@import './components/homeScreen';
