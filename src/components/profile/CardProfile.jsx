@@ -5,9 +5,9 @@ import twitterLogo from '../../assets/twitter-logo.png';
 
 export const CardProfile = () => {
   return (
-    <section className='card-profile__container'>
+    <section className='card-profile__container container'>
       <div className='card-profile__user--img'>
-        
+
       </div>
       <div className='card-profile__user--name'>
         <p>FullStack</p>
@@ -26,7 +26,7 @@ export const CardProfile = () => {
         <img src={twitterLogo} alt="twitter link"/>
       </div>
 
-      <a className='card-profile__user--email' href="mailto:jd.riosdev@gmail.com">Send an e-mail</a>
+      <a className='card-profile__user--email a__custom' href="mailto:jd.riosdev@gmail.com">Send an e-mail</a>
     </section>
   )
 }

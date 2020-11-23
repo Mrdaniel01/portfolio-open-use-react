@@ -1,0 +1,34 @@
+.project-card__container {
+  padding: 35px 40px;
+  margin-top: 50px;
+  margin-left: 40px;
+  position: relative;
+  max-width: 750px;
+
+  h2, .project-card__description {
+    margin-bottom: 20px;
+    height: auto;
+  }
+
+  .project-card__tech {
+    padding-bottom: 20px;
+  }
+
+  .project-card__rol, .project-card__repo {
+    display: flex;
+
+    p {
+      width: 150px;
+      font-weight: 600;
+    }
+    span {
+      font-weight: lighter;
+    }
+  }
+
+  .project-card__link {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+  }
+}

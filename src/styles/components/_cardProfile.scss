@@ -5,12 +5,9 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  background-color: $main-dark-color;
-  border-radius: 35px;
   position: relative;
   width: 360px;
-  box-shadow: 0 3px 3px 1px rgba(0, 0, 0, 0.3);
-  cursor: default;
+
 
   .card-profile__user--img {
     border: 8px solid white;
@@ -49,24 +46,6 @@
       margin: 5px;
     }
   }
-
-  .card-profile__user--email {
-    background-color: white;
-    color: black;
-    width: 80%;
-    padding: 10px 0;
-    border-radius: 500px;
-    box-shadow: 0 3px 5px 3px rgba(0, 0, 0, 0.3);
-    vertical-align: center;
-
-    transition: all .5s;
-
-    &:hover {
-      box-shadow: 0 6px 6px 1px rgba(0, 0, 0, 0.6);
-      
-    }
-  }
-
 }
 
 .pill {

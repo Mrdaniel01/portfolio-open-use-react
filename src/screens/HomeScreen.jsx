@@ -10,8 +10,10 @@ export const HomeScreen = () => {
         <CardProfile />
       </div>
       <div className='home__container--projects'>
-        <FormProject />
         <ProjectCard />
+        <ProjectCard />
+        <ProjectCard />
+        <FormProject />
       </div>
     </section>
   )
