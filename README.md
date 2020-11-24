@@ -18,7 +18,7 @@ Run: npm run start-watch if the page does not reload when saving changes,
 
 ## Deploy 📦
 
-* No yet
+* https://my-port.vercel.app/
 
 ## Built with 🛠️
 
