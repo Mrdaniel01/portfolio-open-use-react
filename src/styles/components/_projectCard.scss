@@ -31,4 +31,15 @@
     right: 20px;
     bottom: 20px;
   }
+  @media (max-width: 1100px) {
+    width: 100%;
+    flex-direction: column;
+    margin: 50px auto;
+    .project-card__link {
+      right: 40px;
+      left: 40px;
+      bottom: -15px;
+      text-align: center;
+    }
+  }
 }

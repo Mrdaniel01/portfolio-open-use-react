@@ -1,7 +1,6 @@
 .home__container {
   display: flex;
   justify-content: space-evenly;
-  flex-wrap: wrap;
   max-width: 1200px;
   margin: 0 auto;
 
@@ -12,5 +11,15 @@
 
   .home__container--projects {
     flex-grow: 3;
+  }
+  @media (max-width: 1100px) {
+    flex-direction: column;
+    padding: 0;
+    .home__container--profile {
+      flex-grow: 1;
+    }
+    .home__container--projects {
+      flex-grow: 1;
+    }
   }
 }
