@@ -1,0 +1,40 @@
+.title__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 30px auto;
+  width: 100%;
+  max-width: 1200px;
+
+  .title__container--logo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    h1 {
+      font-size: 2.5rem;
+    }
+  }
+
+  .title__container--input {
+    display: flex;
+    align-items: center;
+
+    input {
+      height: 50px;
+      border-radius: 35px;
+      border: none;
+      padding: 0 $padding;
+      box-shadow: 0px 3px 1px 1px rgb(136, 136, 136);
+      outline:  none;
+      transition: .5s;
+      margin-left: 10px;
+      &:focus {
+        box-shadow: 0px 3px 1px 1px rgb(202, 202, 202);
+      }
+    }
+    label {
+      text-align: left;
+    }
+  }
+}
