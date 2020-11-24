@@ -13,7 +13,7 @@ export const Navbar = () => {
       <nav className='navbar__container'>
         <Link to="/profile">Profile</Link>
         <Link to="/login">Login</Link>
-        <Link to="/register">Register</Link>
+        {/* <Link to="/register">Register</Link> */}
       </nav>
 
     </header>

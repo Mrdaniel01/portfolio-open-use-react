@@ -41,5 +41,9 @@
       bottom: -15px;
       text-align: center;
     }
+    .project-card__rol, .project-card__repo {
+      flex-direction: column;
+      margin-top: 5px;
+    }
   }
 }
