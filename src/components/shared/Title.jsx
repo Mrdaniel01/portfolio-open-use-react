@@ -4,8 +4,8 @@ export const Title = () => {
   return (
     <section className='title__container'>
       <div className='title__container--logo'>
-        <h1>My Port</h1>
-        <h4>Your portoflio online, easy, fast.</h4>
+        <h1>Made By</h1>
+        <h4>Jhon Doe</h4>
       </div>
       <div className='title__container--input'>
         <label htmlFor='input-search'>Search with github</label>
