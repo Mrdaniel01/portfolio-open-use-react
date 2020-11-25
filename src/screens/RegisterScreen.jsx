@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import githubLogo from '../assets/github-logo.png';
 import gmailLogo from '../assets/gmail-logo.png';
 
@@ -39,7 +40,7 @@ export const RegisterScreen = () => {
         />
 
         <button type="button" className="auth__button" >Continue</button>
-
+        <p className='auth__change-view'>I have an account <Link to="/login">Login</Link></p>
       </form>
 
     </section>

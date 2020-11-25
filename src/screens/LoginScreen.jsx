@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import githubLogo from '../assets/github-logo.png';
 import gmailLogo from '../assets/gmail-logo.png';
 
@@ -31,7 +32,7 @@ export const LoginScreen = () => {
         />
 
         <button type="button" className="auth__button" >Continue</button>
-
+        <p className='auth__change-view'>I do not have an account <Link to="/register">Register</Link></p>
       </form>
 
     </section>
