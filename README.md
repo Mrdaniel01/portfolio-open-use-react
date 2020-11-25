@@ -1,4 +1,4 @@
-# Portfolio Open Use
+# Made By
 
 Easy Portfolio maker
 
@@ -18,7 +18,7 @@ Run: npm run start-watch if the page does not reload when saving changes,
 
 ## Deploy 📦
 
-* https://my-port.vercel.app/
+* https://made-by.vercel.app/
 
 ## Built with 🛠️
 
