@@ -1,8 +1,10 @@
-import React from 'react'
-import { CardProfile } from '../components/profile/CardProfile'
-import { FormProject } from '../components/profile/FormProject'
+import React from 'react';
+import { CardProfile } from '../components/profile/CardProfile';
+//import { FormProject } from '../components/profile/FormProject'
 import { ProjectCard } from '../components/profile/ProjectCard'
-import { Title } from '../components/shared/Title'
+import { Title } from '../components/shared/Title';
+
+import { projects } from '../mock';
 
 export const HomeScreen = () => {
   return (
@@ -13,10 +15,11 @@ export const HomeScreen = () => {
         <CardProfile />
       </div>
       <div className='home__container--projects'>
-        <ProjectCard />
-        <ProjectCard />
-        <ProjectCard />
-        <FormProject />
+        {
+          projects.map((project, i)=>{
+            return <ProjectCard key={i} project={project} />
+          })
+        }
       </div>
     </section>
     </>

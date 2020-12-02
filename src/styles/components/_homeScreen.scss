@@ -11,6 +11,9 @@
 
   .home__container--projects {
     flex-grow: 3;
+    height: 70vh;
+    overflow-x: scroll;
+    overflow: auto;
   }
   @media (max-width: 1100px) {
     flex-direction: column;

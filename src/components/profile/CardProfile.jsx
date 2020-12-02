@@ -7,9 +7,6 @@ import {user} from '../../mock';
 
 export const CardProfile = () => {
 
-
-
-
   return (
     <section className='card-profile__container container'>
       <div className='card-profile__user--img'

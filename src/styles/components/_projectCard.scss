@@ -31,6 +31,14 @@
     right: 20px;
     bottom: 20px;
   }
+  .project-card__repo a {
+    color: white;
+    text-decoration: none;
+    font-size: .8rem;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
   @media (max-width: 1100px) {
     width: 100%;
     flex-direction: column;
