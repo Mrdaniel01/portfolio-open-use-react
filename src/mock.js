@@ -19,6 +19,14 @@ const projects = [
     link_deploy:'https://alwaysupdate.vercel.app/'
   },
   {
+    name:'A Social Media',
+    description:'A Social Media like Facebook mixed width Twitter, you can register or use a fake account to test the app (User: f1 Pass: f).',
+    tecnologies:['Mongo', 'Express', 'Angular', 'Node', 'Bootstrap' ],
+    rol:'Full Stack Developer',
+    repo:'https://github.com/jdrios-dev/a-social-media-angular',
+    link_deploy:'https://a-social-media-angular.herokuapp.com/'
+  },
+  {
     name:'Travel Forest',
     description:'An HTML and SASS Page (No responsive), for a travel agency.',
     tecnologies:['HTML', 'SASS', 'JavaScript'],
