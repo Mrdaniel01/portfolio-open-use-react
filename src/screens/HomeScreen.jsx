@@ -7,6 +7,7 @@ import { Title } from '../components/shared/Title';
 import { projects } from '../mock';
 
 export const HomeScreen = () => {
+
   return (
     <>
     <Title />

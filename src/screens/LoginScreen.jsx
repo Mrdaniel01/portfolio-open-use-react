@@ -2,8 +2,28 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 import githubLogo from '../assets/github-logo.png';
 import gmailLogo from '../assets/gmail-logo.png';
+import { useForm } from '../hooks/useForm';
+import { useDispatch } from 'react-redux';
+import { startLogin } from '../actions/auth';
 
 export const LoginScreen = () => {
+
+  const dispatch = useDispatch();
+
+  const  [ formLoginValues, handleLoginInputChange] = useForm({
+		email: '',
+		password: '',
+  });
+
+  const { email, password } = formLoginValues;
+
+  const handleLogin = (e) => {
+		e.preventDefault()
+    dispatch( startLogin(email, password ));
+//console.log( name, email, password, password2, github_profile, twitter_usernam, bio, location, phone );
+	}
+
+
   return (
     <section className="auth__container">
       <h1>Login</h1>
@@ -13,25 +33,33 @@ export const LoginScreen = () => {
         <img src={githubLogo} alt="github"/>
       </div>
 
-      <form className="auth__form" action="" autoComplete="off">
+      <form
+        className="auth__form"
+        autoComplete="off"
+        onSubmit={handleLogin} 
+      >
 
         <label htmlFor="input-email-login">Email</label>
         <input
           type="text"
           id="input-email-login"
           name="email"
+          value={email}
+          onChange={handleLoginInputChange}
           placeholder="example@mail.com"
         />
 
-        <label htmlFor="input-email-login">Password</label>
+        <label htmlFor="input-pass-login">Password</label>
         <input
           type="password"
-          id="input-email-login"
+          id="input-pass-login"
           name="password"
           placeholder="Password"
+          value={password}
+          onChange={handleLoginInputChange}
         />
 
-        <button type="button" className="auth__button" >Continue</button>
+        <button type="submit" className="auth__button" >Continue</button>
         <p className='auth__change-view'>I do not have an account <Link to="/register">Register</Link></p>
       </form>
 
