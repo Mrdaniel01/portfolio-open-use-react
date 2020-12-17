@@ -1,4 +1,4 @@
-const user = {
+const userMock = {
   name:'Juan Daniel Rios Ramirez',
   photo:'https://res.cloudinary.com/djcsouoma/image/upload/v1597717195/IMG_5496_hgcywh.jpg',
   specialty:'Front-end',
@@ -69,7 +69,7 @@ const projects = [
 ]
 
 module.exports = {
-  user,
+  userMock,
   projects
 }
 

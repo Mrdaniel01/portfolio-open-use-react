@@ -4,7 +4,7 @@ import {
   Switch,
   Route
 } from "react-router-dom";
-//import { Navbar } from "../components/shared/Navbar";
+import { Navbar } from "../components/shared/Navbar";
 import { HomeScreen } from "../screens/HomeScreen";
 import { LoginScreen } from "../screens/LoginScreen";
 import { ProfileScreen } from "../screens/ProfileScreen";
@@ -13,7 +13,7 @@ import { RegisterScreen } from "../screens/RegisterScreen";
 export default function AppRouter() {
   return (
     <Router>
-      {/* <Navbar /> */}
+      <Navbar />
       <div className="router__container">
         <Switch>
           <Route path="/login">
