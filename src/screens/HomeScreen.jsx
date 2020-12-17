@@ -9,11 +9,13 @@ import { projects } from '../mock';
 
 export const HomeScreen = () => {
 
-  
+  const token = localStorage.getItem('token-made-by');
+  const uid = JSON.parse(atob(token.split('.')[1]));
+
   const dispatch = useDispatch()
   useEffect(() => {
-    dispatch(startDataLoad('5fdbc8108131db0017100e04'))
-  }, [dispatch])
+    dispatch(startDataLoad(uid.sub))
+  }, [dispatch, uid.sub])
 
   return (
     <>
