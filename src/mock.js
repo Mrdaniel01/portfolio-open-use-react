@@ -19,6 +19,14 @@ const projects = [
     link_deploy:'https://alwaysupdate.vercel.app/'
   },
   {
+    name:'CRM - Sales management',
+    description:'A CRM to manage your employees sales, stock and clients, take a look with (User: j@j.com Pass: 123456).',
+    tecnologies:['GraphQL', 'Apollo', 'Mongo', 'Next.JS', 'Tailwind' ],
+    rol:'Full Stack Developer',
+    repo:'https://github.com/jdrios-dev/crm-client',
+    link_deploy:'http://crm-client-git-main.mrdaniel01.vercel.app/'
+  },
+  {
     name:'A Social Media',
     description:'A Social Media like Facebook mixed width Twitter, you can register or use a fake account to test the app (User: f1 Pass: f).',
     tecnologies:['Mongo', 'Express', 'Angular', 'Node', 'Bootstrap' ],
