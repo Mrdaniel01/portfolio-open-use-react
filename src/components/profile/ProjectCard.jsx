@@ -7,7 +7,7 @@ const {name, description, link_deploy, repo, rol, tecnologies} = project;
   return (
     <section className='container project-card__container'>
       <h2>{name}</h2>
-  <p className='project-card__description'>{description}</p>
+      <p className='project-card__description'>{description}</p>
 
       <div className='project-card__tech'>
         {

@@ -1,9 +1,10 @@
-import React from 'react'
+import React from 'react';
+import { FormProject } from '../components/profile/FormProject';
 
 export const ProfileScreen = () => {
   return (
     <div>
-      profile
+      <FormProject />
     </div>
   )
 }
