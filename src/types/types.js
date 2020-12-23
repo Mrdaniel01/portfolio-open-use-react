@@ -4,6 +4,8 @@ export const types = {
   logout: '[Auth] Logout',
 
   userLoadData: '[User] User Load Data',
-  userDataLoaded: '[User] User Data Loaded'
+  userDataLoaded: '[User] User Data Loaded',
+
+  newProject: '[Project] New Project', 
 
 }

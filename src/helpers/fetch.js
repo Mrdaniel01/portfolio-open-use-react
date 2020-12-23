@@ -22,7 +22,7 @@ const fetchWithoutToken = ( endpoint, data, method = 'GET' ) => {
 const fetchWithToken = ( endpoint, data, method = 'GET' ) => {
 
   const url = `${baseUrl}/${endpoint}`;//localhost:4000/api/auth
-  const token = localStorage.getItem('token') || '';
+  const token = localStorage.getItem('token-made-by') || '';
 
   if (method === 'GET') {
     return fetch( url, { 
@@ -36,9 +36,9 @@ const fetchWithToken = ( endpoint, data, method = 'GET' ) => {
       method,
       headers: {
         'Content-type': 'application/json',
-        'Token': `Bearer ${token}`
+        'authorization': `Bearer ${token}`
       },
-      body: JSON.stringify( data ) 
+      body: JSON.stringify( data )
     });
   }
 }
