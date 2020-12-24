@@ -1,6 +1,6 @@
 import { fetchWithToken } from "../helpers/fetch";
 import { types } from "../types/types";
-import Swal from "sweetalert2";
+//import Swal from "sweetalert2";
 
 export const startNewProject = (
   title,
@@ -37,7 +37,7 @@ export const startNewProject = (
 }
 
 
-const newProject = (user) => ({
-  type: types.login,
-  payload: user
-})
+// const newProject = (user) => ({
+//   type: types.login,
+//   payload: user
+// })
