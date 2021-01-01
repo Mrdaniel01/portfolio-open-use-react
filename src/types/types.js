@@ -8,4 +8,8 @@ export const types = {
 
   newProject: '[Project] New Project', 
 
+  projectsStart: '[Project] Start loading',
+  projectsSuccess: '[Project] Success laoding',
+  projectsError: '[Project] Error laoding',
+
 }

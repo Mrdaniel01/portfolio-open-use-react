@@ -1,6 +1,6 @@
-import { fetchWithToken } from "../helpers/fetch";
-//import { types } from "../types/types";
-//import Swal from "sweetalert2";
+import { fetchWithToken, fetchWithoutToken } from "../helpers/fetch";
+import { types } from "../types/types";
+import Swal from "sweetalert2";
 
 export const startNewProject = (
   title,
@@ -9,35 +9,81 @@ export const startNewProject = (
   rol,
   repository,
   url) => {
-  return async ( dispatch ) => {
-    const resp = await fetchWithToken('project', { 
-      title,
-      description,
-      technologies: arrTechs,
-      rol,
-      repository,
-      url }, 'POST' );
-    const body = await resp.json();
-
-    console.log(resp);
-    console.log(body);
-
-    // if ( resp.ok ) {
-    //   localStorage.setItem('token-made-by', body.token );
-    //   const dataFromJwt = JSON.parse(atob(body.token.split('.')[1]));
-    //   dispatch( login ( {
-    //     uid: dataFromJwt.sub
-    //   } ))
-    //   dispatch(startDataLoad(dataFromJwt.sub))
-    // } else {
-    //   Swal.fire("Made By", body.message, "error");
-    // }
-
+  return async () => {
+    try {
+      const resp = await fetchWithToken('project', { 
+        title,
+        description,
+        technologies: arrTechs,
+        rol,
+        repository,
+        url }, 'POST' );
+        if(resp.ok){
+          Swal.fire('Created!', 'New proyect created', 'success');
+        }
+    } catch (error) {
+      Swal.fire(
+        'Error',
+        error,
+        'error'
+      )
+    }
+    
   }
 }
 
+export const startDeleteProject = (id) => {
+  return async () => {
+    try {
+      const resp = await fetchWithToken(`project/${id}`, {}, 'DELETE')
+      if (resp.status === 200) {
+        Swal.fire(
+          'Success',
+          'This project has been deleted',
+          'success'
+        )
+      } else {
+        Swal.fire(
+          'Error',
+          'This project can not been deleted',
+          'error'
+        )
+      }
+    } catch (error) {
+      Swal.fire(
+        'Error',
+        'Sorry we have some troubles, try later',
+        'error'
+      )
+    }
+  }
+}
 
-// const newProject = (user) => ({
-//   type: types.login,
-//   payload: user
-// })
+export const startFetchProjects = (id) => {
+  
+  return async (dispatch) => {
+    dispatch(projectsStart())
+    try {
+      const resp =  await fetchWithoutToken(`project/user/${id}`)
+      const data = await resp.json()
+      const projects = await data.projects;
+      dispatch(projectsSuccess(projects))
+    } catch (error) {
+      dispatch(projectsError(error))
+    } 
+  }
+}
+
+const projectsStart = () => ({
+  type: types.projectsStart
+})
+
+const projectsSuccess = (projects) => ({
+  type: types.projectsSuccess,
+  payload: projects
+})
+
+const projectsError = (error) => ({
+  type: types.projectsError,
+  payload: error
+})

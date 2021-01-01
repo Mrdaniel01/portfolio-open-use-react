@@ -33,13 +33,6 @@ export const FormProject = () => {
       repository,
       url
     ));
-    console.log(
-      title,
-      description,
-      arrTechs,
-      rol,
-      repository,
-      url);
   };
 
 

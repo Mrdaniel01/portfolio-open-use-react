@@ -21,7 +21,7 @@ const fetchWithoutToken = ( endpoint, data, method = 'GET' ) => {
 
 const fetchWithToken = ( endpoint, data, method = 'GET' ) => {
 
-  const url = `${baseUrl}/${endpoint}`;//localhost:4000/api/auth
+  const url = `${baseUrl}/${endpoint}`;
   const token = localStorage.getItem('token-made-by') || '';
 
   if (method === 'GET') {

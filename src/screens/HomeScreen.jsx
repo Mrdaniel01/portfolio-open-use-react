@@ -1,20 +1,27 @@
 import React, { useEffect } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { startFetchProjects } from '../actions/project';
 import { startDataLoad } from '../actions/users';
 import { CardProfile } from '../components/profile/CardProfile';
 import { ProjectCard } from '../components/profile/ProjectCard'
 import { Title } from '../components/shared/Title';
-import { projects } from '../mock';
 
 export const HomeScreen = () => {
+
+  const {data, fetching} = useSelector(state => state.projects);
 
   const token = localStorage.getItem('token-made-by');
   const uid = JSON.parse(atob(token.split('.')[1]));
 
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
   useEffect(() => {
     dispatch(startDataLoad(uid.sub))
+    dispatch(startFetchProjects(uid.sub))
   }, [dispatch, uid.sub])
+
+  if(fetching){
+    return 'Loading...'
+  }
 
   return (
     <>
@@ -26,7 +33,7 @@ export const HomeScreen = () => {
       
       <div className='home__container--projects'>
         {
-          projects.map((project, i)=>{
+          data.map((project, i)=>{
             return <ProjectCard key={i} project={project} />
           })
         }
